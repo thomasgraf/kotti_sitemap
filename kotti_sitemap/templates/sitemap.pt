@@ -10,7 +10,7 @@
 
       <loc>${api.url(node)}</loc>
 
-      <lastmod>${node.modification_date.strftime('%Y-%m-%dT%H:%M:%S')}</lastmod>
+      <lastmod>${node.modification_date.isoformat()}Z</lastmod>
 
     </url>
 
