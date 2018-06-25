@@ -9,5 +9,5 @@ from pyramid.view import view_config
              renderer='templates/sitemap.pt',)
 def sitemap(request):
     nodes = DBSession.query(Content).with_polymorphic(Content)
-    request.response_content_type = "text/xml"
+    request.response.content_type = "text/xml"
     return {'nodes': nodes}
